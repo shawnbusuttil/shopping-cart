@@ -1,0 +1,164 @@
+@import "../../vars.scss";
+
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid $light-grey;
+
+    > *:not(:first-child) {
+        padding: 20px;
+    }
+
+    &-info {
+        height: 340px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &-details {
+        display: flex;
+        flex-direction: column;
+
+        > * {
+            margin-bottom: 25px;
+        }
+    }
+
+    &-tag {
+        left: 0;
+        bottom: 0;
+        height: 10%;
+        padding: 7px 20px;
+        word-spacing: 5px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-family: "Farmdrop-Light";
+        color: $white;
+        background-color: $secondary-color;
+    }
+
+    &-name {
+        font-size: 1.3rem;
+        font-family: "Farmdrop-Medium";
+    }
+
+    &-producer {
+        color: $primary-color;
+        font-weight: 600;
+        font-size: 1.2rem;
+        letter-spacing: 1.5px;
+        font-family: "Farmdrop";
+    }
+
+    &-variants, &-measurement {
+        text-transform: uppercase;
+        word-spacing: 5px;
+        font-weight: 700;
+        font-size: 1.1rem;
+    }
+
+    &-variants {
+        padding: 8px 10px;
+        outline: none;
+        font-family: "Farmdrop";
+        width: 100%;
+        border: none;
+        color: $secondary-color;
+        border-radius: 2px;
+        -webkit-appearance: none;
+        background: url("../../icons/chevron.svg") no-repeat 95% rgba($tertiary-color, 0.5);
+        background-size: 1rem;
+    }
+    
+    &-measurement {
+        color: $dark-grey;
+        font-family: "Farmdrop-Light";
+        word-spacing: 5px;
+        letter-spacing: 1.5px;
+        font-weight: 700;
+        font-size: 1.2rem;
+        margin: 0;
+    }
+
+    &-price {
+        display: flex;
+        font-weight: 700;
+        letter-spacing: 1px;
+
+        > * {
+            width: 50%;
+        }
+
+        &-discount {
+            color: $accent;
+            font-size: 1.1rem;
+        }
+
+        &-old {
+            font-size: 0.9rem;
+            text-decoration: line-through;
+        }
+
+        &-new {
+            color: $accent;
+            font-size: 1.4rem;
+        }
+
+        &-info {
+            font-size: 1.4rem;
+
+            > * {
+                margin-top: 25px;
+            }
+        }
+
+        &-unit {
+            text-align: right;
+            align-self: flex-end;
+            padding-bottom: 5px;
+        }
+    }
+
+    &-controls {
+        display: flex;
+        justify-content: space-between;
+
+        button {
+            line-height: 1;
+            font-weight: 700;
+            background-color: rgba($tertiary-color, 0.5);
+
+            &.product-controls-add {
+                width: 50%;
+                color: $white;
+                font-size: 1rem;
+                background-color: $primary-color;
+            }
+
+            &.product-controls-increment, &.product-controls-decrement {
+                font-size: 2rem;
+                color: $secondary-color;
+            }
+        }
+
+        &-box {
+            width: 40px;
+            height: 40px;
+            border: 2px solid darken($tertiary-color, 10%);
+            background-color: $white;
+        }
+
+        &-counter {
+            width: 30px;
+            height: 40px;
+            padding: 15px 0;
+            display: inline-block;
+            line-height: 1;
+            font-weight: 700;
+            text-align: center;
+            vertical-align: top;
+        }
+    }
+}

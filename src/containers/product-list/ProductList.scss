@@ -1,0 +1,14 @@
+@import "../../vars.scss";
+
+.product-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px auto;
+
+    > * {
+        margin: $item-spacing;
+        width: calc(#{$item-width} - #{$item-spacing * 2});
+        height: 720px;
+    }
+}

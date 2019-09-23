@@ -1,0 +1,13 @@
+@import "../../vars.scss";
+
+header {
+    height: 60px;
+    display: flex;
+    padding: 0 50px;
+    align-items: center;
+    background-color: $primary-color;
+
+    img {
+        width: 130px;
+    }
+}
