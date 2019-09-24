@@ -6,7 +6,7 @@ import Image from "./../image/Image";
 
 const Product = (props) => {
     let variantView = props.info.variants.length > 1 ? <select className="product-variants" onChange={props.variantChange}>
-        {props.info.variants.map(variant => <option value={variant.pricePerUnit}>
+        {props.info.variants.map((variant, i) => <option key={i} value={i}>
             {variant.measurement.displayName}
         </option>)}
     </select> : <p className="product-measurement">{props.info.measurement.displayName}</p>;

@@ -10,5 +10,18 @@
         margin: $item-spacing;
         width: calc(#{$item-width} - #{$item-spacing * 2});
         height: 720px;
+
+        @media (max-width: 1366px) {
+            width: calc(#{33.3%} - #{$item-spacing * 2});
+        }
+
+        @media (max-width: 1179px) {
+            width: calc(#{50%} - #{$item-spacing * 2});
+        }
+
+        @media (max-width: 639px) {
+            width: calc(#{100%} - #{$item-spacing * 2});
+            height: 640px;
+        }
     }
 }
