@@ -1,7 +1,8 @@
 import reducer from "./reducer";
 import { PRODUCT_ACTIONS } from "./actions";
+
+import { parseWeighting } from "../product.utils";
 import { PRODUCT_MOCK } from "../testing/product.mock";
-import { parseSaleText, parseWeighting } from "../product.utils";
 
 describe("Products Reducer", () => {
     it("should return the initial state", () => {

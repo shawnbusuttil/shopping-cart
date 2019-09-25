@@ -10,6 +10,8 @@
         margin: $item-spacing;
         width: calc(#{$item-width} - #{$item-spacing * 2});
         height: 720px;
+        
+        // This query sequence could be inverted to achieve mobile-first.
 
         @media (max-width: 1366px) {
             width: calc(#{33.3%} - #{$item-spacing * 2});
