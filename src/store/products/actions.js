@@ -10,7 +10,6 @@ export const productActions = {
         }
     },
     changeVariant(payload) {
-        console.log(payload);
         return {
             type: PRODUCT_ACTIONS.changeVariant,
             payload
