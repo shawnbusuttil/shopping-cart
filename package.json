@@ -5,6 +5,7 @@
   "dependencies": {
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
+    "jest": "^24.9.0",
     "node-sass": "^4.12.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
@@ -34,6 +35,7 @@
     ]
   },
   "devDependencies": {
-    "redux-test-utils": "^0.3.0"
+    "redux-test-utils": "^0.3.0",
+    "sinon": "^7.5.0"
   }
 }

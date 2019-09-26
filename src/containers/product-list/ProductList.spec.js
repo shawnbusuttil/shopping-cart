@@ -1,5 +1,5 @@
 import React from "react";
-import { shallow, mount } from "enzyme";
+import { mount } from "enzyme";
 import { Provider } from "react-redux";
 import { createMockStore } from "redux-test-utils";
 
@@ -41,8 +41,10 @@ describe("ProductListContainer", () => {
 		expect(store.isActionTypeDispatched(CART_ACTIONS.addItem)).toBeTruthy();
 	});
 
-	it("removes an item to cart", () => {
+	it("removes an item from cart", () => {
 		container.find(Product).props().removeItem(PRODUCT_MOCK);
 		expect(store.isActionTypeDispatched(CART_ACTIONS.removeItem)).toBeTruthy();
 	});
+
+	afterEach(() => container.unmount());
 });

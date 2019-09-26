@@ -29,3 +29,29 @@ export const PRODUCT_MOCK = {
     },
     salePrice: null
 };
+
+export const PRODUCT_MOCK_WITH_VARIANTS = {
+  ...PRODUCT_MOCK,
+  variants: [
+    {
+      pricePerUnit: "£10.64/kg",
+      measurement: {
+        displayName: "With bone (min. 700g)"
+      }
+    },
+    {
+      pricePerUnit: "£11.00/kg",
+      measurement: {
+        displayName: "With bone and ketchup (min. 800g)"
+      }
+    }
+  ]
+};
+
+export const PRODUCT_MOCK_WITH_DISCOUNT = {
+  ...PRODUCT_MOCK,
+  saleText: "10% OFF",
+  salePrice: {
+    pence: 1500
+  }
+};
