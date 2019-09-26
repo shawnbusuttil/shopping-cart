@@ -14,6 +14,7 @@ class ProductList extends Component {
     }
 
     render() {
+        // If this was async, it'd be handled differently: with a loading state feedback and fallback text.
         return this.props.products ? <div className="product-list">
             {this.props.products.map((product, i) => {
                 const key = product.name + " - " + product.measurement.displayName;
